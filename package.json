@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/josemando/aws-cloudfront-create-invalidation/issues"
   },
-  "homepage": "https://github.com/josemando/aws-cloudfront-create-invalidation#readme"
+  "homepage": "https://github.com/josemando/aws-cloudfront-create-invalidation#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "aws-sdk": "^2.720.0"
+  }
 }
