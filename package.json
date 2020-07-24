@@ -1,0 +1,20 @@
+{
+  "name": "aws-cloudfront-create-invalidation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josemando/aws-cloudfront-create-invalidation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josemando/aws-cloudfront-create-invalidation/issues"
+  },
+  "homepage": "https://github.com/josemando/aws-cloudfront-create-invalidation#readme"
+}
