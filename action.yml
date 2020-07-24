@@ -1,0 +1,21 @@
+name: 'Amazon CloudFront "Create Invalidation" Action for GitHub Actions'
+description: 'Create a new invalidation on Amazon CloudFront'
+branding:
+  icon: 'cloud'
+  color: 'orange'
+
+inputs:
+  distribution-id:
+    description: 'The id of the CloudFront distribution to create a invalidation.'
+    required: true
+  paths:
+    description: 'An array of paths to be invalidated.'
+    required: true
+
+outputs:
+  location:
+    description: 'The fully qualified URI of the distribution and invalidation batch request, including the Invalidation ID.'
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
