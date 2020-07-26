@@ -23,7 +23,7 @@ async function run() {
 
     // inputs can only be strings, so parse them using newlines
     let paths = pathsString.split('\n');
-
+    // if there's only one element, convert to array
     if (!Array.isArray(paths)) {
       paths = [paths];
     }
@@ -42,7 +42,7 @@ async function run() {
     }).promise();
 
     core.setOutput('location', createInvalidationResponse.Location);
-    core.info(`Invalidation created. Watch the progress in the AWS CloudFront console: ${createInvalidationResponse.Location}`);
+    core.info(`Invalidation created. Watch the progress in the AWS CloudFront console: https://console.aws.amazon.com/cloudfront/home?region=${aws.config.region}#distribution-settings:${distributionId}`);
 
   } catch (error) {
     core.setFailed(error.message);
