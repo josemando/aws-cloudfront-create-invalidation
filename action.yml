@@ -9,7 +9,7 @@ inputs:
     description: 'The id of the CloudFront distribution to create a invalidation.'
     required: true
   paths:
-    description: 'An array of paths to be invalidated.'
+    description: 'A list of paths to be invalidated. If there are multiple elements, use a multi-line String with one element per line'
     required: true
 
 outputs:

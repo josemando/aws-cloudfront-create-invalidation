@@ -19,7 +19,10 @@ async function run() {
 
     // get inputs
     const distributionId = core.getInput('distribution-id', { required: true });
-    const paths = core.getInput('paths', { required: true });
+    const pathsString = core.getInput('paths', { required: true });
+
+    // inputs can only be strings, so parse them using newlines
+    const paths = pathsString.split('\n');
 
     // create invalidation
     core.debug('Creating invalidation');
