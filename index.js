@@ -22,7 +22,11 @@ async function run() {
     const pathsString = core.getInput('paths', { required: true });
 
     // inputs can only be strings, so parse them using newlines
-    const paths = pathsString.split('\n');
+    let paths = pathsString.split('\n');
+
+    if (!Array.isArray(paths)) {
+      paths = [paths];
+    }
 
     // create invalidation
     core.debug('Creating invalidation');
