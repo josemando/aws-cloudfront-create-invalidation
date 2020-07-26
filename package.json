@@ -1,7 +1,7 @@
 {
   "name": "aws-cloudfront-create-invalidation",
   "version": "1.0.0",
-  "description": "",
+  "description": "Amazon CloudFront \"Create Invalidation\" Action for GitHub Actions",
   "main": "index.js",
   "scripts": {
     "package": "ncc build index.js -o dist",
@@ -11,9 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/josemando/aws-cloudfront-create-invalidation.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "AWS",
+    "CloudFront",
+    "Github",
+    "Actions",
+    "JavaScript"
+  ],
+  "author": "Josemando Sobral",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/josemando/aws-cloudfront-create-invalidation/issues"
   },
