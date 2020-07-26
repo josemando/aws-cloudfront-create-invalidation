@@ -9,7 +9,7 @@ Create a new invalidation on Amazon CloudFront.
 - [Usage](#usage)
 - [Credentials and Region](#credentials-and-region)
 - [Permissions](#permissions)
-- [Roadmap][#roadmap]
+- [Roadmap](#roadmap)
 - [License Summary](#license-summary)
 
 <!-- tocstop -->
