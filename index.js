@@ -10,6 +10,22 @@ function createTimestamp() {
   return isoString;
 }
 
+function parseAndCleanPaths(pathsString) {
+  let paths = pathsString.split('\n');
+
+  // if there's only one element, convert to array
+  if (!Array.isArray(paths)) {
+    paths = [paths];
+  }
+
+  // clean up any spaces
+  for (let i = 0; i < paths.length; ++i) {
+    paths[i] = paths[i].trim();
+  }
+
+  return paths;
+}
+
 
 async function run() {
   try {
@@ -21,12 +37,8 @@ async function run() {
     const distributionId = core.getInput('distribution-id', { required: true });
     const pathsString = core.getInput('paths', { required: true });
 
-    // inputs can only be strings, so parse them using newlines
-    let paths = pathsString.split('\n');
-    // if there's only one element, convert to array
-    if (!Array.isArray(paths)) {
-      paths = [paths];
-    }
+    // inputs can only be strings, so parse them to an array
+    const paths = parseAndCleanPaths(pathsString);
 
     // create invalidation
     core.debug('Creating invalidation');
